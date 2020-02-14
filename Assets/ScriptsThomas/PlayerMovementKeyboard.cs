@@ -23,12 +23,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(horizontalMovement != 0 && verticalMovement !=0)
-        {
-            //il se passe des trucs
-        }
-        rb.velocity = direction * Time.deltaTime * speedModifier;
-
+        GetInput();
+        rb.velocity = direction *  speedModifier;
     }
 
     private void GetInput()
