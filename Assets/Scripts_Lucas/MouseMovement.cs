@@ -5,7 +5,10 @@ using UnityEngine;
 public class MouseMovement : MonoBehaviour
 {
     public Vector3 mousePos;
-    public float limit = 4;
+    public float limitxMax = 4;
+    public float limitxMini = 4;
+    public float limity = 4;
+    
     public float speed = 2;
     float distance;
     public float distanceMin = 0.1f;
@@ -28,13 +31,22 @@ public class MouseMovement : MonoBehaviour
         direction.z = transform.position.z;
 
         //si la distance entre la souris et le joueur est supérieure à la distance min choisie il peut se déplacer
-        if (distance>distanceMin && transform.position.y<=limit)
+        if (distance>distanceMin && transform.position.x<=limitxMax && transform.position.y <= limity && transform.position.x >= limitxMini)
         {
             gameObject.transform.position += direction * Time.deltaTime * speed;
-            if (transform.position.y > 4)
+            if (transform.position.x > limitxMax)
             {
-                transform.position = new Vector3 (transform.position.x,limit,transform.position.z);
+                transform.position = new Vector3 (limitxMax,transform.position.y,transform.position.z);
             }
+            if (transform.position.x < limitxMini)
+            {
+                transform.position = new Vector3(limitxMini, transform.position.y, transform.position.z);
+            }
+            if (transform.position.y > limity)
+            {
+                transform.position = new Vector3(transform.position.x,limity, transform.position.z);
+            }
+            
         }
         
     }
