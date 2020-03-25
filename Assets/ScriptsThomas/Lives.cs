@@ -22,7 +22,8 @@ public class Lives : MonoBehaviour
 
         text.text = textToDisplay;
 
-        if (lives >= 0)
+        if (lives <= 0)
+            Destroy(gameObject);
             GameOver();
     }
 

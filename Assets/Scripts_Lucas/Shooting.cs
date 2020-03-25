@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     public float cooldown;
     public GameObject bullet;
     bool canshoot = true;
+
     // Start is called before the first frame update
     void Start()
     {
