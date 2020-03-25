@@ -15,7 +15,7 @@ public class Lives : MonoBehaviour
     void Update()
     {
         if (lives > 99)
-            textToDisplay = "Lives : +99";
+            textToDisplay = "Lives : 99+";
 
         else
             textToDisplay ="Lives : " + lives.ToString();

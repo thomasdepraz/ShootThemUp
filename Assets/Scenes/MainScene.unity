@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec69486d6fe468249801e47a416186cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
+  lives: 100
   textToDisplay: 
   text: {fileID: 7653275505352786553}
 --- !u!1 &872753728
