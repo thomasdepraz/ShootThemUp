@@ -7,8 +7,9 @@ public class MouseMovement : MonoBehaviour
     public Vector3 mousePos;
     public float limitxMax = 4;
     public float limitxMini = 4;
-    public float limity = 4;
-    
+    public float limityMax = 4;
+    public float limityMini = 4;
+
     public float speed = 2;
     float distance;
     public float distanceMin = 0.1f;
@@ -31,7 +32,7 @@ public class MouseMovement : MonoBehaviour
         direction.z = transform.position.z;
 
         //si la distance entre la souris et le joueur est supérieure à la distance min choisie il peut se déplacer
-        if (distance>distanceMin && transform.position.x<=limitxMax && transform.position.y <= limity && transform.position.x >= limitxMini)
+        if (distance>distanceMin && transform.position.x<=limitxMax && transform.position.y <= limityMax && transform.position.x >= limitxMini && transform.position.y >= limityMini)
         {
             gameObject.transform.position += direction * Time.deltaTime * speed;
             if (transform.position.x > limitxMax)
@@ -42,12 +43,17 @@ public class MouseMovement : MonoBehaviour
             {
                 transform.position = new Vector3(limitxMini, transform.position.y, transform.position.z);
             }
-            if (transform.position.y > limity)
+            if (transform.position.y > limityMax)
             {
-                transform.position = new Vector3(transform.position.x,limity, transform.position.z);
+                transform.position = new Vector3(transform.position.x,limityMax, transform.position.z);
             }
-            
+            if (transform.position.y < limityMini)
+            {
+                transform.position = new Vector3(transform.position.x, limityMini, transform.position.z);
+            }
+
+
         }
-        
+
     }
 }
