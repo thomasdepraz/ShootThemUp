@@ -14,10 +14,13 @@ public class MultiShot : MonoBehaviour
     public float angle;
     private int hp = 5;
 
+    public AudioSource shotgunAudioSource;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerScore = player.GetComponent<Score>();
+        shotgunAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class MultiShot : MonoBehaviour
         
         if (canshoot == true)
         {
+            shotgunAudioSource.Play();
             Instantiate(ennemiShot, transform.position, Quaternion.Euler(0,0,angle));
             Instantiate(ennemiShot, transform.position, Quaternion.Euler(0, 0, angle- offset));
             Instantiate(ennemiShot, transform.position, Quaternion.Euler(0, 0, angle + offset));
