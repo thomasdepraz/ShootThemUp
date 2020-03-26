@@ -10,10 +10,17 @@ public class EnemyPistol : MonoBehaviour
     bool canshoot = true;
     private Score playerScore;
 
+
+    //Musique
+
+    public AudioSource pistolAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         playerScore = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+
+        pistolAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +43,8 @@ public class EnemyPistol : MonoBehaviour
     private void Shoot()
     {
         GameObject Projectile = Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+
+        pistolAudioSource.Play();
     }
 
     IEnumerator ShootCooldown()
