@@ -29,7 +29,7 @@ public class EnemyCorbeille : MonoBehaviour
 
         if (hp <= 0)
         {
-            playerScore.ScoreUp(100);
+            playerScore.ScoreUp(500);
             //anim destroy
             Destroy(gameObject); //Pour l'instant
         }

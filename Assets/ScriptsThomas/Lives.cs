@@ -9,7 +9,7 @@ public class Lives : MonoBehaviour
     public int lives = 3;
     public string textToDisplay;
     public Text text;
-    public Canvas gameOver;
+    public GameObject gameOverUI;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,7 @@ public class Lives : MonoBehaviour
         text.text = textToDisplay;
 
         if (lives <= 0)
-            Destroy(gameObject);
+            
             GameOver();
     }
 
@@ -39,7 +39,7 @@ public class Lives : MonoBehaviour
 
     public void GameOver()
     {
-        gameOver.enabled = true;
+        gameOverUI.SetActive(true);
         gameObject.SetActive(false);
 
     }
