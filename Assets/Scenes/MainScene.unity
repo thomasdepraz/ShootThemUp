@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1517910643}
-  speed: 1.2
+  speed: 0.8
 --- !u!1 &112577426
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1693395822}
-  speed: 1.1
+  speed: 0.8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 112577426}
-  speed: 0.9
+  speed: 0.8
 --- !u!1 &769147629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1517910643}
-  speed: 1.2
+  speed: 0.7
 --- !u!212 &957728944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1348201499}
-  speed: 1
+  speed: 0.7
 --- !u!1 &1517910643
 GameObject:
   m_ObjectHideFlags: 0
