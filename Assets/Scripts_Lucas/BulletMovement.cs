@@ -25,7 +25,20 @@ public class BulletMovement : MonoBehaviour
                 cols.gameObject.GetComponent<EnemyPistol>().TakeDamage();
                 Destroy(gameObject);
             }
+
+            if (cols.gameObject.CompareTag("Enemy2"))
+            {
+                cols.gameObject.GetComponent<MultiShot>().TakeDamage();
+                Destroy(gameObject);
+            }
+
+            if (cols.gameObject.CompareTag("Enemy3"))
+            {
+                cols.gameObject.GetComponent<EnemyCorbeille>().TakeDamage();
+                Destroy(gameObject);
+            }
         }
+
     }
     private void OnBecameInvisible()
     {

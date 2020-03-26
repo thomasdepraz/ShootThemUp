@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCorbeille : MonoBehaviour
 {
-    private int hp = 3;
+    private int hp = 7;
     public GameObject projectileA;
     public GameObject projectileB;
     public GameObject projectileC;
