@@ -9,7 +9,7 @@ public class Lives : MonoBehaviour
     public int lives = 3;
     public string textToDisplay;
     public Text text;
-    
+    public Canvas gameOver;
 
     // Update is called once per frame
     void Update()
@@ -39,6 +39,8 @@ public class Lives : MonoBehaviour
 
     public void GameOver()
     {
-        //le game over wlh
+        gameOver.enabled = true;
+        gameObject.SetActive(false);
+
     }
 }
